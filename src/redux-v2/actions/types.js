@@ -1,0 +1,2 @@
+export const GET_DATA_CORONA = 'GET_DATA_CORONA';
+export const GET_DATA_CORONA_2 = 'GET_DATA_CORONA_2';

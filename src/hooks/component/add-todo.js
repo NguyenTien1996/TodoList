@@ -1,0 +1,23 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+const AddTodo = (props) => {
+    return(
+        <>
+            <input value={props.value}  type={props.type} onChange={props.change}/>
+            <button
+                type={props.typeButton}
+                onClick={() => props.add(props.value)}
+            >
+            {props.children}</button>
+        </>
+    )
+}
+AddTodo.propTypes = {
+    type: PropTypes.string,
+    change: PropTypes.func,
+    typeButton: PropTypes.string,
+    value: PropTypes.string,
+    add: PropTypes.func,
+    children: PropTypes.string
+}
+export default React.memo(AddTodo)
